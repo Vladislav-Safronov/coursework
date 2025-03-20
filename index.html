@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logo.png">
+    <title>HobbyGames</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-container">
+          <!-- Логотип -->
+          <div class="logo">
+            <a class="logo-box" href="#">
+              <img src="logo.png" alt="Логотип">
+              <p class="logo-name">Board Games</p>
+            </a>
+          </div>
+      
+          <!-- Навигация -->
+          <nav class="header__nav">
+            <ul class="header__nav-list">
+              <li><a href="#" class="header__nav-link">Каталог</a></li>
+              <li><a href="#" class="header__nav-link">Войти</a></li>
+              <li><a href="#" class="header__nav-link">Избранное</a></li>
+              <li><a href="#" class="header__nav-link">Корзина</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <!-- Поиск -->
+        <div class="header__search-block">
+            <input type="text" class="header__search-input" placeholder="Поиск...">
+            <button class="header__search-button">Найти</button>
+        </div>
+      </header>
+
+        <!-- --------------------------------------- -->
+
+    <nav class="nav">
+        <ul class="nav__list">
+            <li class="nav__item"><a href="#" class="nav__link">Настольные игры</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Варгеймы</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Сборные модели</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Хиты</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Новинки</a></li>
+        </ul>
+    </nav>
+
+        <!-- --------------------------------------- -->
+
+
+    <div class="ad">
+        <div class="ad__1">
+            <img src="ad1.webp" alt="ad1">
+        </div>
+        <div class="ad__2">
+            <img src="ad2.webp" alt="ad2">
+        </div>
+        <div class="ad__3">
+            <img src="ad3.webp" alt="ad3">
+        </div>
+        <div class="ad__4">
+            <img src="ad4.webp" alt="ad4">
+        </div>
+    </div>
+
+<!-- ------------------------------------------------- -->
+
+    <main class="main ">
+        <div class="main__grid first cont">
+            <div class="first__1">
+                <div class="vertical-menu">
+                    <ul class="main-categories">
+                      <li>
+                        <a href="#">Каталог</a>
+                        <ul class="sub-categories">
+                          <li><a href="#">Новинки</a></li>
+                          <li><a href="#">Хиты</a></li>
+                          <li><a href="#">Предзаказы</a></li>
+                          <li><a href="#">Наборы игр</a></li>
+                          <li><a href="#">Скидки %</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="#">Настольные игры</a>
+                        <ul class="sub-categories">
+                          <li><a href="#">Карточные</a></li>
+                          <li><a href="#">Классические</a></li>
+                          <li><a href="#">Книги-игры</a></li>
+                          <li><a href="#">Кооперативные</a></li>
+                          <li><a href="#">Детективные</a></li>
+                          <li><a href="#">Приключенческие</a></li>
+                          <li><a href="#">Ролевые</a></li>
+                          <li><a href="#">Стратегические</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="#">Коллекционные карточные игры</a>
+                        <ul class="sub-categories">
+                          <li><a href="#">Magic the Gathering</a></li>
+                          <li><a href="#">Star Wars: Destiny</a></li>
+                          <li><a href="#">Берсерк</a></li>
+                          <li><a href="#">Берсерк. Герои</a></li>
+                        </ul>
+                      </li>
+                      
+                      <li>
+                        <a href="#">Игры для детей</a>
+                        <ul class="sub-categories">
+                          <li><a href="#">Детские игры</a></li>
+                          <li><a href="#">Семейные игры</a></li>
+                          <li><a href="#">Игрушки HABA</a></li>
+                          <li><a href="#">Развивающие наборы</a></li>
+                        </ul>
+                      </li>
+                      
+                    </ul>
+                  </div>
+            </div>
+            <div class="first__2">
+                <div class="grid-block-2">
+                    <div class="block-header">Виды настольных игр</div>
+                    <div class="block-item">Детские</div>
+                    <div class="block-item">Семейные</div>
+                    <div class="block-item">Вечериночные</div>
+                    <div class="block-item">Со скидкой</div>
+                    <div class="block-item">Популярные</div>
+                    <div class="block-item">Хардкорные</div>
+                  </div>
+            </div>
+            <div class="first__3">
+                <div class="filter-block">
+                    <h3 class="filter-title">Подбор игр</h3>
+                    <form class="filter-form">
+                      <label for="price">Цена:</label>
+                      <input type="number" id="price" placeholder="Макс. цена" min="0">
+                  
+                      <label for="players">Число игроков:</label>
+                      <input type="number" id="players" placeholder="Кол-во игроков" min="1">
+                  
+                      <button type="submit" class="filter-button">Подобрать</button>
+                    </form>
+                  </div>
+            </div>
+            <div class="first__4">
+                <div class="games-block">
+                    <h2 class="games-title">Новинки</h2>
+                    <div class="games-grid">
+                      <!-- Карточка 1 -->
+                      <div class="game-card">
+                        <img src="first.jpg" alt="Свет в тумане" class="game-image">
+                        <h3 class="game-name">Свет в тумане</h3>
+                      </div>
+                  
+                      <!-- Карточка 2 -->
+                      <div class="game-card">
+                        <img src="second.jpg" alt="HIT!" class="game-image">
+                        <h3 class="game-name">HIT!</h3>
+                      </div>
+                  
+                      <!-- Карточка 3 -->
+                      <div class="game-card">
+                        <img src="third.jpg" alt="Изнанка: Кирки и склянки" class="game-image">
+                        <h3 class="game-name">Изнанка: Кирки и склянки</h3>
+                      </div>
+                  
+                      <!-- Карточка 4 -->
+                      <div class="game-card">
+                        <img src="fourth.jpg" alt="Изнанка" class="game-image">
+                        <h3 class="game-name">Изнанка</h3>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+
+            <!--  -->
+
+
+        <section class="products-section">
+            <h2 class="section-title">Наши товары</h2>
+            <div class="products-grid">
+                <!-- Карточка 1 -->
+                <div class="product-card">
+                    <div>
+                        <img src="1.jpg" alt="Российский боевой вертолёт Ка-52 Аллигатор" class="product-image">
+                        <h3 class="product-name">Российский боевой вертолёт Ка-52 "Аллигатор"</h3>
+                    </div>
+                    <div>
+                        <p class="product-price">2500 руб.</p>
+                        <button class="buy-button">Купить</button>
+                    </div>
+                    
+                </div>
+            
+                <!-- Карточка 2 -->
+                <div class="product-card">
+                    <div>
+                        <img src="2.jpg" alt="Советские парашютисты 1941-1943" class="product-image">
+                        <h3 class="product-name">Советские парашютисты 1941-1943</h3>
+                    </div>
+                    <div>
+                        <p class="product-price">1800 руб.</p>
+                        <button class="buy-button">Купить</button>
+                    </div>
+                </div>
+            
+                <!-- Карточка 3 -->
+                <div class="product-card">
+                    <div>
+                        <img src="3.jpg" alt="Советская 122-мм гаубица М-30" class="product-image">
+                        <h3 class="product-name">Советская 122-мм гаубица М-30</h3>
+                    </div>
+                    <div>
+                        <p class="product-price">1600 руб.</p>
+                        <button class="buy-button">Купить</button>
+                    </div>
+                </div>
+            
+                <!-- Карточка 4 -->
+                <div class="product-card">
+                    <div>
+                        <img src="4.jpg" alt="Советская стрелковая рота 1943-1945" class="product-image">
+                        <h3 class="product-name">Советская стрелковая рота 1943-1945</h3>
+                    </div>
+                    <div>
+                        <p class="product-price">2000 руб.</p>
+                        <button class="buy-button">Купить</button>
+                    </div>
+                </div>
+
+                <!-- Карточка 5 -->
+                <div class="product-card">
+                    <div>
+                        <img src="4.jpg" alt="Российский боевой вертолёт Ка-52 Аллигатор" class="product-image">
+                        <h3 class="product-name">Российский боевой вертолёт Ка-52 "Аллигатор"</h3>
+                    </div>
+                    <div>
+                        <p class="product-price">2500 руб.</p>
+                        <button class="buy-button">Купить</button>
+                    </div>
+                </div>
+            
+                <!-- Карточка 6 -->
+                <div class="product-card">
+                    <div>
+                        <img src="1.jpg" alt="Советские парашютисты 1941-1943" class="product-image">
+                        <h3 class="product-name">Советские парашютисты 1941-1943</h3>
+                    </div>
+                    <div>
+                        <p class="product-price">1600 руб.</p>
+                        <button class="buy-button">Купить</button>
+                    </div>
+                </div>
+            
+                <!-- Карточка 7 -->
+                <div class="product-card">
+                    <div>
+                        <img src="2.jpg" alt="Советская 122-мм гаубица М-30" class="product-image">
+                        <h3 class="product-name">Советская 122-мм гаубица М-30</h3>
+                    </div>
+                    <div>
+                        <p class="product-price">1800 руб.</p>
+                        <button class="buy-button">Купить</button>
+                    </div>
+                </div>
+            
+                <!-- Карточка 8 -->
+                <div class="product-card">
+                    <div>
+                        <img src="3.jpg" alt="Советская стрелковая рота 1943-1945" class="product-image">
+                        <h3 class="product-name">Советская стрелковая рота 1943-1945</h3>
+                    </div>
+                    <div>
+                        <p class="product-price">1400 руб.</p>
+                        <button class="buy-button">Купить</button>
+                    </div>
+                </div>
+                
+            </div>
+            </section>
+    </main>
+
+
+
+    <footer class="footer">
+        <div class="footer__content">
+            <div class="footer__logo">Board Games</div>
+
+        </div>
+        <hr class="footer__divider">
+        <div class="footer__info">
+            <ul class="footer__links">
+                <li><a href="#" class="footer__link">Политика конфиденциальности</a></li>
+                <li><a href="#" class="footer__link">Условия использования</a></li>
+            </ul>
+            <p class="footer__text">© 2025 Магазин yастольных игр Board Games. Все права защищены.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
