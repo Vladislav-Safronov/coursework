@@ -64,6 +64,9 @@ a {
     display: flex;
     gap: 20px;
 }
+.header__menu {
+  display: none;
+}
 
 .header__nav-link {
     color: white;
@@ -72,9 +75,13 @@ a {
     transition: color 0.3s ease;
 }
 @media (max-width: 480px) {
-  .header__nav-link {
-    font-size: 12px;
-  }
+    .header__menu {
+      display: block;
+      width: 50px;
+    }
+    .header__nav-list {
+      display: none;
+    }
 }
 
 .header__nav-link:hover {
