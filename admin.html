@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Админ-панель | Настольные игры</title>
+    <link rel="stylesheet" href="admin.css">
+    <link rel="icon" href="/logo.png" type="image/x-icon">
+    
+</head>
+
+<body>
+    <header class="admin-header">
+        <h1>Админ-панель</h1>
+        <nav>
+            <a href="index.html">Выйти</a>
+        </nav>
+    </header>
+
+    <main class="admin-container">
+        <section class="add-game-section">
+            <h2>Добавить новую игру</h2>
+            <form id="add-game-form" class="game-form">
+                <div class="form-group">
+                    <label for="game-name">Название игры:</label>
+                    <input type="text" id="game-name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="game-category">Категория:</label>
+                    <select id="game-category" required>
+                        <option value="">Выберите категорию</option>
+                        <option value="family">Семейные</option>
+                        <option value="strategy">Стратегии</option>
+                        <option value="party">Вечериночные</option>
+                        <option value="children">Детские</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="game-price">Цена (руб):</label>
+                    <input type="number" id="game-price" min="0" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="game-players">Количество игроков:</label>
+                    <input type="text" id="game-players" placeholder="2-4" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="game-age">Возраст:</label>
+                    <input type="text" id="game-age" placeholder="12+" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="game-description">Описание:</label>
+                    <textarea id="game-description" rows="4" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="game-image">Изображение:</label>
+                    <input type="file" id="game-image" accept="image/*" required>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Добавить игру</button>
+                    <button type="reset" class="btn btn-secondary">Очистить</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="games-list-section">
+            <h2>Список игр</h2>
+            <!-- <div class="search-filter">
+                <input type="text" placeholder="Поиск по названию...">
+                <select>
+                    <option value="">Все категории</option>
+                    <option value="family">Семейные</option>
+                    <option value="strategy">Стратегии</option>
+                    <option value="party">Вечериночные</option>
+                    <option value="children">Детские</option>
+                </select>
+            </div> -->
+
+            <div class="games-list">
+                <!-- Пример карточки игры
+                <div class="game-card">
+                    <div class="game-image">
+                        <img src="https://via.placeholder.com/150" alt="Название игры">
+                    </div>
+                    <div class="game-info">
+                        <h3>Название игры</h3>
+                        <p><strong>Категория:</strong> Семейные</p>
+                        <p><strong>Цена:</strong> 2500 руб.</p>
+                        <p><strong>Игроки:</strong> 2-4</p>
+                        <p><strong>Возраст:</strong> 12+</p>
+                    </div>
+                    <div class="game-actions">
+                        <button class="btn btn-edit">Редактировать</button>
+                        <button class="btn btn-delete">Удалить</button>
+                    </div>
+                </div> -->
+
+                <!-- Здесь будут добавляться новые игры через JS -->
+            </div>
+        </section>
+    </main>
+
+    <script src="admin.js"></script>
+</body>
+</html>

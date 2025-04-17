@@ -57,6 +57,13 @@ a {
 }
 
 /* Навигация */
+
+.header__nav {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
 .header__nav-list {
     list-style: none;
     margin: 0;
@@ -67,6 +74,21 @@ a {
 .header__menu {
   display: none;
 }
+.auth-btn {
+  background-color: #AE2877;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.auth-btn:hover {
+  background-color: #8b225f;
+}
+
+
 
 .header__nav-link {
     color: white;
@@ -74,7 +96,7 @@ a {
     font-size: 16px;
     transition: color 0.3s ease;
 }
-@media (max-width: 480px) {
+@media (max-width: 670px) {
     .header__menu {
       display: block;
       width: 50px;
@@ -123,7 +145,6 @@ a {
     background-color: #2b2d42;
     color: white;
     border: none;
-    border-rheader__adius: 0 5px 5px 0;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -148,7 +169,7 @@ a {
     }
 }
 
-/* ------------------------------------------ */
+/* ---------------------------------------- */
 
 
 .nav {
@@ -190,86 +211,83 @@ a {
 
 /* ------------------------------------------ */
 
-/* .ad {
-    padding: 10px;
-    background-color: #8d99ae;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-    justify-items: center;
-}
-.ad > div {
-    background-size: cover;
-}
-
-.ad > div > img {
-    max-width: 100%;
-    max-height: 100%;
-} */
 
 
 
 /* Cлайдер */
-.slider-container {
-  max-width: 100%; /* Максимальная ширина слайдера */
-  margin: 0 auto;
-  overflow: hidden; /* Скрываем всё, что выходит за пределы контейнера */
-  position: relative;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+.slider-background {
+  box-shadow: 0px 10px 8px 0px rgba(34, 60, 80, 0.2);
   background-color: #8d99ae;
+  z-index: 10;
+  position: relative;
+}
+.slider-container {
+  padding-left: 20px;
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
-/* Контейнер для слайдов */
 .slider {
   display: flex;
-  overflow-x: auto; /* Горизонтальная прокрутка */
-  scroll-snap-type: x mandatory; /* Привязка к слайдам */
-  scroll-behavior: smooth; /* Плавная прокрутка */
-  width: 100%; /* Занимает всю ширину контейнера */
+  transition: transform 0.5s ease;
+  gap: 15px;
+  padding: 20px 0;
 }
 
-/* Отдельный слайд */
 .slide {
-  flex: 0 0 25%; /* Каждый слайд занимает 25% ширины (4 слайда в строке) */
-  scroll-snap-align: start; /* Привязка к началу слайда */
+  flex: 0 0 calc(25% - 15px);
   box-sizing: border-box;
-  padding: 10px;
-  min-width: 25%; /* Минимальная ширина слайда */
-  cursor: pointer;
 }
 
-/* Изображение в слайде */
 .slide img {
   width: 100%;
   height: auto;
-  border-radius: 10px;
-  display: block;
+  border-radius: 8px;
 }
 
-/* Скрыть стандартный скроллбар */
-.slider::-webkit-scrollbar {
-  display: none;
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 10;
 }
 
-.slider {
-  -ms-overflow-style: none; /* IE и Edge */
-  scrollbar-width: none; /* Firefox */
+.slider-btn:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
 }
 
 /* Адаптация для мобильных устройств */
 @media (max-width: 768px) {
   .slide {
-    flex: 0 0 50%; /* 2 слайда в строке на планшетах */
-    min-width: 50%; /* Минимальная ширина слайда */
+    flex: 0 0 calc(50% - 15px);
   }
 }
 
 @media (max-width: 480px) {
   .slide {
-    flex: 0 0 100%; /* 1 слайд в строке на мобильных */
-    min-width: 100%; /* Минимальная ширина слайда */
+    flex: 0 0 calc(100% - 15px);
   }
 }
+
+
 /* ------------------------------------------ */
 
 main {

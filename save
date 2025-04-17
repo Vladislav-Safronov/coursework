@@ -1,0 +1,60 @@
+.slider-container {
+  max-width: 100%; /* Максимальная ширина слайдера */
+  margin: 0 auto;
+  overflow: hidden; /* Скрываем всё, что выходит за пределы контейнера */
+  position: relative;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  background-color: #8d99ae;
+}
+
+/* Контейнер для слайдов */
+.slider {
+  display: flex;
+  overflow-x: auto; /* Горизонтальная прокрутка */
+  scroll-snap-type: x mandatory; /* Привязка к слайдам */
+  scroll-behavior: smooth; /* Плавная прокрутка */
+  width: 100%; /* Занимает всю ширину контейнера */
+}
+
+/* Отдельный слайд */
+.slide {
+  flex: 0 0 25%; /* Каждый слайд занимает 25% ширины (4 слайда в строке) */
+  scroll-snap-align: start; /* Привязка к началу слайда */
+  box-sizing: border-box;
+  padding: 10px;
+  min-width: 25%; /* Минимальная ширина слайда */
+  cursor: pointer;
+}
+
+/* Изображение в слайде */
+.slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+}
+
+/* Скрыть стандартный скроллбар */
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+.slider {
+  -ms-overflow-style: none; /* IE и Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+  .slide {
+    flex: 0 0 50%; /* 2 слайда в строке на планшетах */
+    min-width: 50%; /* Минимальная ширина слайда */
+  }
+}
+
+@media (max-width: 480px) {
+  .slide {
+    flex: 0 0 100%; /* 1 слайд в строке на мобильных */
+    min-width: 100%; /* Минимальная ширина слайда */
+  }
+}
